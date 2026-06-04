@@ -8,6 +8,7 @@ export default function Topbar() {
       </a>
       <nav className="nav">
         <a href="#work">WORK</a>
+        <a href="#projects">PROJECTS</a>
         <a href="#skills">SKILLS</a>
         <a href="#education">EDUCATION</a>
       </nav>

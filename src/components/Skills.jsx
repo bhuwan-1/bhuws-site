@@ -5,7 +5,7 @@ import SectionHead from "./SectionHead";
 export default function Skills() {
   return (
     <section id="skills" className="section section-dark">
-      <SectionHead index="②" title="STACK" />
+      <SectionHead index="③" title="STACK" />
       <div className="skills-grid">
         {SKILLS.map((g) => (
           <Reveal className="skill-block" key={g.label}>

@@ -5,7 +5,7 @@ import SectionHead from "./SectionHead";
 export default function Education() {
   return (
     <section id="education" className="section">
-      <SectionHead index="③" title="EDUCATION + HONOURS" />
+      <SectionHead index="④" title="EDUCATION + HONOURS" />
       <div className="edu-grid">
         <Reveal className="edu-col">
           <h3 className="col-label">SCHOOLING</h3>
