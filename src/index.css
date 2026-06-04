@@ -57,8 +57,10 @@ body {
 
 .tick i {
   font-style: normal;
+  font-size: 0.6em;
   color: var(--accent-bright);
   margin: 0 1.25rem;
+  vertical-align: middle;
 }
 
 @keyframes ticker {
@@ -180,18 +182,32 @@ body {
   text-stroke: 3px var(--ink);
 }
 
-.hero-bottom {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-top: clamp(1.5rem, 4vw, 3rem);
+/* typewriter reveal — chars are laid out immediately, shown one by one */
+.type-char { opacity: 0; }
+
+.type-char.on { opacity: 1; }
+
+.type-caret {
+  opacity: 0;
+  color: var(--accent);
+  -webkit-text-stroke: 0;
+}
+
+.type-caret.on {
+  /* blink 3 times after typing finishes, then fade out for good */
+  animation: caret-blink 1s steps(2) 3;
+}
+
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 .hero-blurb {
   max-width: 34rem;
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 500;
+  margin-bottom: 0.75rem;
 }
 
 .hero-blurb strong {
@@ -201,15 +217,42 @@ body {
   font-weight: 700;
 }
 
-.hero-star {
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: var(--accent);
-  line-height: 1;
-  animation: spin 14s linear infinite;
-  flex-shrink: 0;
+.hero-title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+.hero-commits {
+  display: block;
+  margin-top: clamp(2rem, 5vw, 3rem);
+  border: var(--border);
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  padding: 0.9rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero-commits:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--accent);
+}
+
+.hero-commits-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+.hero-commits img { display: block; width: 100%; height: auto; }
 
 /* boot-up stagger on first paint */
 .boot {
@@ -488,7 +531,7 @@ body {
 }
 
 .award-list li::before {
-  content: '★';
+  content: '●';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -583,7 +626,7 @@ body {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .skills-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
-  .hero-star { display: none; }
+  .hero-blurb { margin-bottom: 0; }
   .xp-meta { align-items: flex-start; }
 }
 
@@ -594,4 +637,6 @@ body {
     transition-duration: 0.01ms !important;
   }
   .boot, .reveal { opacity: 1; transform: none; }
+  .type-char, .type-char.on { opacity: 1; }
+  .type-caret, .type-caret.on { opacity: 0; animation: none; }
 }
