@@ -14,8 +14,9 @@ export default function Contact() {
           <span>+975 17459528</span>
           <span aria-hidden="true">✦</span>
           <span>THIMPHU, BHUTAN</span>
-          <span aria-hidden="true">✦</span>
-          <span>FULL WORKING RIGHTS — AUSTRALIA</span>
+          {/* Uncomment when in oz */}
+          {/* <span aria-hidden="true">✦</span> */}
+          {/* <span>FULL WORKING RIGHTS — AUSTRALIA</span> */}
           <span aria-hidden="true">✦</span>
           <a
             className="contact-link"
