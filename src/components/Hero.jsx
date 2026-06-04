@@ -1,27 +1,32 @@
 import { GITHUB, GITHUB_USER } from "../constants";
+import AsciiPortrait from "./AsciiPortrait";
 import TypeLine from "./TypeLine";
 
 export default function Hero() {
   return (
     <section className="hero">
-      <p className="hero-kicker boot boot-1">
-        <span className="blink">●</span> SOFTWARE ENGINEER — THIMPHU, BHUTAN
-      </p>
-      <div className="hero-title-row">
-        <h1 className="hero-name">
-          <TypeLine text="BHUWAN" start={350} />
-          <TypeLine
-            className="hero-outline"
-            text="S.KOIRALA"
-            start={350 + 6 * 80 + 250}
-            caret
-          />
-        </h1>
-        <p className="hero-blurb boot boot-4">
-          I build <strong>enterprise platforms</strong> with React, Next.js,
-          Angular &amp; React Native — and lead the teams that ship them. Tech
-          lead at Selise Digital Platforms.
-        </p>
+      <div className="hero-grid">
+        <div className="hero-main">
+          <p className="hero-kicker boot boot-1">
+            <span className="blink">●</span> SOFTWARE ENGINEER — THIMPHU,
+            BHUTAN
+          </p>
+          <h1 className="hero-name">
+            <TypeLine text="BHUWAN" start={350} />
+            <TypeLine
+              className="hero-outline"
+              text="S.KOIRALA"
+              start={350 + 6 * 80 + 250}
+              caret
+            />
+          </h1>
+          <p className="hero-blurb boot boot-4">
+            I build <strong>enterprise platforms</strong> with React, Next.js,
+            Angular &amp; React Native — and lead the teams that ship them.
+            Tech lead at Selise Digital Platforms.
+          </p>
+        </div>
+        <AsciiPortrait />
       </div>
 
       <a
