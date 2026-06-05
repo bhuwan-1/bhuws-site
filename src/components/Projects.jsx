@@ -10,7 +10,7 @@ export default function Projects() {
         {PROJECTS.map((p) => (
           <Reveal
             as="article"
-            className={p.img ? "proj proj-has-shot" : "proj"}
+            className={p.img || p.shots ? "proj proj-has-shot" : "proj"}
             key={p.n}
           >
             <div className="proj-copy">
@@ -52,7 +52,17 @@ export default function Projects() {
             {p.img && (
               <figure className="proj-shot">
                 <img src={p.img} alt={p.imgAlt} loading="lazy" />
-                <figcaption>↳ EXTENSION POPUP — LIVE LEDGER</figcaption>
+                <figcaption>{p.shotCaption}</figcaption>
+              </figure>
+            )}
+            {p.shots && (
+              <figure className="proj-shot proj-shot-strip">
+                <div className="shot-frames">
+                  {p.shots.map((s) => (
+                    <img key={s.src} src={s.src} alt={s.alt} loading="lazy" />
+                  ))}
+                </div>
+                <figcaption>{p.shotCaption}</figcaption>
               </figure>
             )}
           </Reveal>

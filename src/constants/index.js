@@ -89,6 +89,29 @@ export const PROJECTS = [
     img: "/jobtally.png",
     imgAlt:
       "JobTally popup — tally-mark dashboard with per-site breakdown and recent applications",
+    shotCaption: "↳ EXTENSION POPUP — LIVE LEDGER",
+  },
+  {
+    n: "02",
+    name: "Mochi",
+    tagline: "A pixel cat that naps when you won't.",
+    tag: "DESKTOP APP",
+    span: "2026",
+    desc: "A soft little pixel cat that lives on your desktop — pet it, watch it wander, and let it guilt you into breaks. After ~50 minutes of continuous screen time, Mochi falls asleep in protest and won't wake until you take a real 5-minute break.",
+    points: [
+      "A tiny webpage in an invisible, always-on-top Tauri window — pixel-art cat built from 4×4 SVG squares, every animation pure CSS driven by state classes.",
+      "Autonomous personality — drag it anywhere, click to pet, and every few minutes it strolls off on its own or takes a catnap instead.",
+      "Break reminders via a single macOS idle-time call — it only reads seconds since your last input, never what you type or do.",
+      "Ships as a ~2 MB DMG — plain HTML/CSS/JS frontend, no framework, with a thin Rust shell.",
+    ],
+    stack: ["Tauri", "Rust", "JavaScript", "CSS Animations"],
+    repo: "https://github.com/bhuwan-1/mochi",
+    shots: [
+      { src: "/mochi-idle.png", alt: "Mochi sitting and blinking" },
+      { src: "/mochi-happy.png", alt: "Mochi being petted, with a heart" },
+      { src: "/mochi-sleep.png", alt: "Mochi sleeping with floating z's" },
+    ],
+    shotCaption: "↳ VIBING · PETTED · ON BREAK",
   },
 ];
 

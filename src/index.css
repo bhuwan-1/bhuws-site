@@ -620,6 +620,35 @@ body {
   color: var(--accent-bright);
 }
 
+/* pixel-art sprite strip — stickers on the ink plate, not a screenshot */
+.shot-frames {
+  display: flex;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 17rem;
+}
+
+.proj-shot-strip img {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  aspect-ratio: 1;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border: 0;
+  box-shadow: none;
+  filter: drop-shadow(4px 4px 0 var(--accent-bright));
+}
+
+.proj-shot-strip img:nth-child(1) { transform: rotate(-2deg); }
+.proj-shot-strip img:nth-child(3) { transform: rotate(2.5deg); }
+
+.proj:hover .proj-shot-strip img {
+  box-shadow: none;
+  filter: drop-shadow(2px 2px 0 var(--accent-bright));
+}
+
 .proj-desc {
   margin-top: 1.25rem;
   max-width: 52rem;
@@ -881,7 +910,8 @@ body {
   .proj-meta { align-items: flex-start; }
   .proj-has-shot { grid-template-columns: 1fr; }
   .proj-shot { border-left: 0; border-top: var(--border); }
-  .proj-shot img { transform: none; }
+  .proj-shot img,
+  .proj-shot-strip img:nth-child(n) { transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
