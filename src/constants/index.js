@@ -73,6 +73,27 @@ export const EXPERIENCE = [
 export const PROJECTS = [
   {
     n: "01",
+    name: "PokeMart BT",
+    tagline: "A single-seller Pokémon card storefront.",
+    tag: "WEB APP",
+    span: "2026",
+    desc: "A mobile-first storefront for individual Pokémon cards and sealed sets. Visitors browse a public, no-login catalog, build a cart, and complete their order by opening a pre-filled WhatsApp chat with the seller — no payment, order or shipping logic in the app; the transaction is negotiated in WhatsApp.",
+    points: [
+      "Public catalog — search, filtering (type, set, condition, price, graded) and sorting, with no auth required.",
+      "Cart → WhatsApp handoff — the cart lives in localStorage and 'Order via WhatsApp' opens wa.me with a readable, pre-filled message. No checkout, no server-persisted cart.",
+      "Admin inventory manager — authenticated CRUD with multi-image upload, single-card vs sealed-set classification, graded-card fields and active/featured toggles.",
+      "Security by RLS — Supabase Row-Level Security is the real access control: anon reads active rows only, all writes require an authenticated session. No custom backend.",
+    ],
+    stack: ["React", "TypeScript", "Vite", "TanStack Query", "Supabase", "Tailwind"],
+    repo: "https://github.com/bhuwan-1/pokemartbt",
+    site: "https://pokemartbt.com",
+    img: "/pokemart.png",
+    imgAlt: "PokeMart BT — mobile-first Pokémon card catalog with cart",
+    imgWide: true,
+    shotCaption: "↳ PUBLIC CATALOG — BROWSE & CART",
+  },
+  {
+    n: "02",
     name: "JobTally",
     tagline: "A quiet ledger for your job hunt.",
     tag: "CHROME EXTENSION",
@@ -92,7 +113,7 @@ export const PROJECTS = [
     shotCaption: "↳ EXTENSION POPUP — LIVE LEDGER",
   },
   {
-    n: "02",
+    n: "03",
     name: "Mochi",
     tagline: "A pixel cat that naps when you won't.",
     tag: "DESKTOP APP",

@@ -39,18 +39,30 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <a
-                  className="btn btn-small"
-                  href={p.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  VIEW CODE ↗
-                </a>
+                <div className="proj-links">
+                  <a
+                    className="btn btn-small"
+                    href={p.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    VIEW CODE ↗
+                  </a>
+                  {p.site && (
+                    <a
+                      className="btn btn-small btn-ghost"
+                      href={p.site}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      VISIT SITE ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
             {p.img && (
-              <figure className="proj-shot">
+              <figure className={p.imgWide ? "proj-shot proj-shot-wide" : "proj-shot"}>
                 <img src={p.img} alt={p.imgAlt} loading="lazy" />
                 <figcaption>{p.shotCaption}</figcaption>
               </figure>
