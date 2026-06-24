@@ -21,10 +21,12 @@ export const EXPERIENCE = [
     span: "2024 — NOW",
     tag: "PROJECT TECH LEAD",
     points: [
-      "Direct a frontend engineering team — high-quality code through mentorship and rigorous reviews.",
-      "Engineer large-scale enterprise apps with React, Next.js & Angular across diverse business units.",
-      "Spearhead cross-platform mobile strategy with React Native — high-fidelity iOS & Android delivery.",
-      "Translate complex business requirements into scalable technical roadmaps with stakeholders.",
+      "Lead a frontend team of 5 as project tech lead — high-quality code through mentorship and rigorous reviews.",
+      "Engineer large-scale enterprise apps with React, Next.js & Angular across e-commerce and telecom platforms.",
+      "Cut API usage 98% on a Storyblok-powered storefront — slashing CMS costs and lifting page-load performance 90%.",
+      "Shipped a telecom web feature that doubled sales (2×) and drove cross-platform React Native delivery for iOS & Android.",
+      "Ran a two-month bootcamp for 46 non-technical participants — 4 products built by program end, one already funded.",
+      "Mentored six junior engineers through 1:1s, workshops & pair programming — earned a promotion within the first year.",
     ],
   },
   {
@@ -167,6 +169,10 @@ export const SKILLS = [
     items: [
       "Git / GitHub / Bitbucket",
       "Agile / Scrum",
+      "CI/CD",
+      "AWS",
+      "JIRA",
+      "AI-Assisted Dev (Claude Code, Cursor)",
       "Mentorship",
       "Stakeholder Management",
     ],
