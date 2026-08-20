@@ -86,7 +86,14 @@ export const PROJECTS = [
       "Admin inventory manager — authenticated CRUD with multi-image upload, single-card vs sealed-set classification, graded-card fields and active/featured toggles.",
       "Security by RLS — Supabase Row-Level Security is the real access control: anon reads active rows only, all writes require an authenticated session. No custom backend.",
     ],
-    stack: ["React", "TypeScript", "Vite", "TanStack Query", "Supabase", "Tailwind"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "TanStack Query",
+      "Supabase",
+      "Tailwind",
+    ],
     repo: "https://github.com/bhuwan-1/pokemartbt",
     site: "https://pokemartbt.com",
     img: "/pokemart.png",
@@ -208,6 +215,6 @@ export const AWARDS = [
 export const SPOKEN = ["English", "Nepali", "Hindi", "Dzongkha"];
 
 export const EMAIL = "bhuws.dev@gmail.com";
-export const GITHUB = "https://github.com/bhuwan-1";
-export const GITHUB_USER = "bhuwan-1";
+export const GITHUB = "https://github.com/bhuwan-selise-tnt";
+export const GITHUB_USER = "bhuwan-selise-tnt";
 export const LINKEDIN = "https://www.linkedin.com/in/bhuwan-sharma-37b5bb187/";
